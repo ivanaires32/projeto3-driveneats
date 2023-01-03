@@ -1,4 +1,9 @@
 
+let pedidoPrato;
+let pedidoBebida;
+let pedidoSobremesa;
+
+pedidoFinalizado();
 
 function selecionarFrango(){
     frango.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
@@ -8,6 +13,9 @@ function selecionarFrango(){
     iconeFrango.style.display = "block";
     iconeCarne.style.display = "none";
     iconePeixe.style.display = "none";
+
+    pedidoPrato = "Frango Yin Yang";
+
 }
 
 function selecionarCarne(){
@@ -18,6 +26,8 @@ function selecionarCarne(){
     iconeCarne.style.display = "block";
     iconeFrango.style.display = "none";
     iconePeixe.style.display = "none";
+
+    pedidoPrato = "Churrasco";
 }
 
 function selecionarPeixe(){
@@ -28,6 +38,8 @@ function selecionarPeixe(){
     iconePeixe.style.display = "block";
     iconeFrango.style.display = "none";
     iconeCarne.style.display = "none";
+
+    pedidoPrato = "Peixe Frito";
 }
 
 //******************************** */
@@ -43,6 +55,9 @@ function selecionarCoca(){
     iconeCoca.style.display = "block";
     iconeGuarana.style.display = "none";
     iconeSuco.style.display = "none";
+
+    pedidoBebida = "Coca-Cola";
+
 }
 
 function selecionarGuarana(){
@@ -53,6 +68,8 @@ function selecionarGuarana(){
     iconeGuarana.style.display = "block";
     iconeCoca.style.display = "none";
     iconeSuco.style.display = "none";
+
+    pedidoBebida = "Guaraná";
 }
 
 function selecionarSuco(){
@@ -63,6 +80,8 @@ function selecionarSuco(){
     iconeSuco.style.display = "block";
     iconeGuarana.style.display = "none";
     iconeCoca.style.display = "none";
+
+    pedidoBebida = "Suco";
 }
 
 /*************************** */
@@ -77,6 +96,8 @@ function selecionarPudim(){
     iconePudim.style.display = "block";
     iconeBolo.style.display = "none";
     iconeSorvete.style.display = "none";
+
+    pedidoSobremesa = "Pudim";
 }
 
 function selecionarBolo(){
@@ -87,6 +108,8 @@ function selecionarBolo(){
     iconeBolo.style.display = "block";
     iconePudim.style.display = "none";
     iconeSorvete.style.display = "none";
+
+    pedidoSobremesa = "Bolo de Chocolate";
 }
 
 function selecionarSorvete(){
@@ -97,15 +120,24 @@ function selecionarSorvete(){
     iconeSorvete.style.display = "block";
     iconeBolo.style.display = "none";
     iconePudim.style.display = "none";
+
+    pedidoSobremesa = "Sorvete de Baunilha";
 }
 
 /******************** */
 
-/* const pudim =  document.getElementById('pudim');
-const bolo = document.getElementById('bolo');
-const sorvete = document.getElementById('sorvete');
+function pedidoFinalizado(){
+    if ((pedidoPrato == "Frango Yin Yang" || pedidoPrato == "Churrasco" || pedidoPrato == "Peixe Frito") && (pedidoBebida == "Coca-Cola" || pedidoBebida == "Guaraná" || pedidoBebida == "Suco") && (pedidoSobremesa == "Pudim" || pedidoSobremesa == "Bolo de Chocolate" || pedidoSobremesa == "Sorvete de Baunilha")) {
+        fecharPedido.style.display = "block";
+    }
+}
 
-const iconePudim = document.getElementById('iconePudim');
-const iconeBolo = document.getElementById('iconeBolo');
-const iconeSorvete = document.getElementById('iconeSorvete');
-*/
+/******************* */
+
+function fecharOPedido(){
+        let texto = "Olá, gostaria de fazer o pedido:- Prato: "+ pedidoPrato+"- Bebida: "+ pedidoBebida +"- Sobremesa: "+ pedidoSobremesa +": R$ 27.70";
+    
+        window.open("https://wa.me/+5591989397323?text="+texto);
+    
+}
+
