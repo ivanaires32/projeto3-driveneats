@@ -137,7 +137,7 @@ function pedidoFinalizado(){
 function fecharOPedido(){
         let texto = "Olá, gostaria de fazer o pedido:- Prato: "+ pedidoPrato+"- Bebida: "+ pedidoBebida +"- Sobremesa: "+ pedidoSobremesa +": R$ 27.70";
     
-        window.open("https://wa.me/+5591989397323?text="+texto);
+        window.open("https://wa.me/+5591999999999?text="+texto);
     
 }
 
