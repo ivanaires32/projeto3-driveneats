@@ -1,143 +1,174 @@
-
 let pedidoPrato;
 let pedidoBebida;
 let pedidoSobremesa;
 
-pedidoFinalizado();
+function selecionarFrango() {
+    document.getElementById('frango').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('carne').style.boxShadow = 'none';
+    document.getElementById('peixe').style.boxShadow = 'none';
 
-function selecionarFrango(){
-    frango.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    carne.style.boxShadow = "none";
-    peixe.style.boxShadow = "none";
+    document.getElementById('iconeFrango').style.display = 'block';
+    document.getElementById('iconeCarne').style.display = 'none';
+    document.getElementById('iconePeixe').style.display = 'none';
 
-    iconeFrango.style.display = "block";
-    iconeCarne.style.display = "none";
-    iconePeixe.style.display = "none";
-
-    pedidoPrato = "Frango Yin Yang";
-
+    pedidoPrato = ['Frango Yin Yang', 14.9];
 }
 
-function selecionarCarne(){
-    carne.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    frango.style.boxShadow = "none";
-    peixe.style.boxShadow = "none";
+function selecionarCarne() {
+    document.getElementById('carne').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('frango').style.boxShadow = 'none';
+    document.getElementById('peixe').style.boxShadow = 'none';
 
-    iconeCarne.style.display = "block";
-    iconeFrango.style.display = "none";
-    iconePeixe.style.display = "none";
+    document.getElementById('iconeCarne').style.display = 'block';
+    document.getElementById('iconeFrango').style.display = 'none';
+    document.getElementById('iconePeixe').style.display = 'none';
 
-    pedidoPrato = "Churrasco";
+    pedidoPrato = ['Churrasco', 17.9];
 }
 
-function selecionarPeixe(){
-    peixe.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    carne.style.boxShadow = "none";
-    frango.style.boxShadow = "none";
+function selecionarPeixe() {
+    document.getElementById('peixe').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('frango').style.boxShadow = 'none';
+    document.getElementById('carne').style.boxShadow = 'none';
 
-    iconePeixe.style.display = "block";
-    iconeFrango.style.display = "none";
-    iconeCarne.style.display = "none";
+    document.getElementById('iconePeixe').style.display = 'block';
+    document.getElementById('iconeFrango').style.display = 'none';
+    document.getElementById('iconeCarne').style.display = 'none';
 
-    pedidoPrato = "Peixe Frito";
+    pedidoPrato = ['Peixe Frito', 12.9];
 }
 
 //******************************** */
 
+function selecionarCoca() {
+    document.getElementById('coca').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('guarana').style.boxShadow = 'none';
+    document.getElementById('suco').style.boxShadow = 'none';
 
+    document.getElementById('iconeCoca').style.display = 'block';
+    document.getElementById('iconeGuarana').style.display = 'none';
+    document.getElementById('iconeSuco').style.display = 'none';
 
-
-function selecionarCoca(){
-    coca.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    guarana.style.boxShadow = "none";
-    suco.style.boxShadow = "none";
-
-    iconeCoca.style.display = "block";
-    iconeGuarana.style.display = "none";
-    iconeSuco.style.display = "none";
-
-    pedidoBebida = "Coca-Cola";
-
+    pedidoBebida = ['Coca-Cola', 4.9];
 }
 
-function selecionarGuarana(){
-    guarana.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    coca.style.boxShadow = "none";
-    suco.style.boxShadow = "none";
+function selecionarGuarana() {
+    document.getElementById('guarana').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('coca').style.boxShadow = 'none';
+    document.getElementById('suco').style.boxShadow = 'none';
 
-    iconeGuarana.style.display = "block";
-    iconeCoca.style.display = "none";
-    iconeSuco.style.display = "none";
+    document.getElementById('iconeGuarana').style.display = 'block';
+    document.getElementById('iconeCoca').style.display = 'none';
+    document.getElementById('iconeSuco').style.display = 'none';
 
-    pedidoBebida = "Guaraná";
+    pedidoBebida = ['Guaraná', 3.9];
 }
 
-function selecionarSuco(){
-    suco.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    guarana.style.boxShadow = "none";
-    coca.style.boxShadow = "none";
+function selecionarSuco() {
+    document.getElementById('suco').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('guarana').style.boxShadow = 'none';
+    document.getElementById('coca').style.boxShadow = 'none';
 
-    iconeSuco.style.display = "block";
-    iconeGuarana.style.display = "none";
-    iconeCoca.style.display = "none";
+    document.getElementById('iconeSuco').style.display = 'block';
+    document.getElementById('iconeGuarana').style.display = 'none';
+    document.getElementById('iconeCoca').style.display = 'none';
 
-    pedidoBebida = "Suco";
+    pedidoBebida = ['Suco', 6.9];
 }
 
 /*************************** */
 
+function selecionarPudim() {
+    document.getElementById('pudim').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('bolo').style.boxShadow = 'none';
+    document.getElementById('sorvete').style.boxShadow = 'none';
 
+    document.getElementById('iconePudim').style.display = 'block';
+    document.getElementById('iconeBolo').style.display = 'none';
+    document.getElementById('iconeSorvete').style.display = 'none';
 
-function selecionarPudim(){
-    pudim.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    bolo.style.boxShadow = "none";
-    sorvete.style.boxShadow = "none";
-
-    iconePudim.style.display = "block";
-    iconeBolo.style.display = "none";
-    iconeSorvete.style.display = "none";
-
-    pedidoSobremesa = "Pudim";
+    pedidoSobremesa = ['Pudim', 7.9];
 }
 
-function selecionarBolo(){
-    bolo.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    pudim.style.boxShadow = "none";
-    sorvete.style.boxShadow = "none";
+function selecionarBolo() {
+    document.getElementById('bolo').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('pudim').style.boxShadow = 'none';
+    document.getElementById('sorvete').style.boxShadow = 'none';
 
-    iconeBolo.style.display = "block";
-    iconePudim.style.display = "none";
-    iconeSorvete.style.display = "none";
+    document.getElementById('iconeBolo').style.display = 'block';
+    document.getElementById('iconePudim').style.display = 'none';
+    document.getElementById('iconeSorvete').style.display = 'none';
 
-    pedidoSobremesa = "Bolo de Chocolate";
+    pedidoSobremesa = ['Bolo de Chocolate', 8.9];
 }
 
-function selecionarSorvete(){
-    sorvete.style.boxShadow = "inset 0px 0px 0px 5px #32B72F";
-    bolo.style.boxShadow = "none";
-    pudim.style.boxShadow = "none";
+function selecionarSorvete() {
+    document.getElementById('sorvete').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
+    document.getElementById('bolo').style.boxShadow = 'none';
+    document.getElementById('pudim').style.boxShadow = 'none';
 
-    iconeSorvete.style.display = "block";
-    iconeBolo.style.display = "none";
-    iconePudim.style.display = "none";
+    document.getElementById('iconeSorvete').style.display = 'block';
+    document.getElementById('iconeBolo').style.display = 'none';
+    document.getElementById('iconePudim').style.display = 'none';
 
-    pedidoSobremesa = "Sorvete de Baunilha";
+    pedidoSobremesa = ['Sorvete de Baunilha', 6.9];
 }
 
 /******************** */
 
-function pedidoFinalizado(){
-    if ((pedidoPrato == "Frango Yin Yang" || pedidoPrato == "Churrasco" || pedidoPrato == "Peixe Frito") && (pedidoBebida == "Coca-Cola" || pedidoBebida == "Guaraná" || pedidoBebida == "Suco") && (pedidoSobremesa == "Pudim" || pedidoSobremesa == "Bolo de Chocolate" || pedidoSobremesa == "Sorvete de Baunilha")) {
-        fecharPedido.style.display = "block";
+function pedidoFinalizado() {
+    if (
+        (pedidoPrato[0] === 'Frango Yin Yang' ||
+            pedidoPrato[0] === 'Churrasco' ||
+            pedidoPrato[0] === 'Peixe Frito') &&
+        (pedidoBebida[0] === 'Coca-Cola' || pedidoBebida[0] === 'Guaraná' || pedidoBebida[0] === 'Suco') &&
+        (pedidoSobremesa[0] === 'Pudim' ||
+            pedidoSobremesa[0] === 'Bolo de Chocolate' ||
+            pedidoSobremesa[0] === 'Sorvete de Baunilha')
+    ) {
+        const botaoFinalizar = document.querySelector('.selecionarItens button');
+        botaoFinalizar.style.backgroundColor = '#32B72F';
+        botaoFinalizar.style.fontWeight = '600';
+        botaoFinalizar.style.cursor = 'pointer';
+        botaoFinalizar.innerHTML = 'Fechar Pedido';
     }
 }
 
 /******************* */
 
-function fecharOPedido(){
-        let texto = "Olá, gostaria de fazer o pedido:- Prato: "+ pedidoPrato+"- Bebida: "+ pedidoBebida +"- Sobremesa: "+ pedidoSobremesa +": R$ 27.70";
-    
-        window.open("https://wa.me/+5591999999999?text="+texto);
-    
+function pedidoFinalizado() {
+    if (
+        (pedidoPrato[0] === 'Frango Yin Yang' ||
+            pedidoPrato[0] === 'Churrasco' ||
+            pedidoPrato[0] === 'Peixe Frito') &&
+        (pedidoBebida[0] === 'Coca-Cola' || pedidoBebida[0] === 'Guaraná' || pedidoBebida[0] === 'Suco') &&
+        (pedidoSobremesa[0] === 'Pudim' ||
+            pedidoSobremesa[0] === 'Bolo de Chocolate' ||
+            pedidoSobremesa[0] === 'Sorvete de Baunilha')
+    ) {
+        const botaoFinalizar = document.querySelector('.selecionarItens button');
+        botaoFinalizar.style.backgroundColor = '#32B72F';
+        botaoFinalizar.style.fontWeight = '600';
+        botaoFinalizar.style.cursor = 'pointer';
+        botaoFinalizar.innerHTML = 'Fechar Pedido';
+    }
 }
 
+/******************* */
+
+function fecharOPedido() {
+    let somaValor = (pedidoPrato[1] * 10 + pedidoBebida[1] * 10 + pedidoSobremesa[1] * 10) / 10;
+    let formatarValor = somaValor.toFixed(2);
+    let texto =
+        'Olá, gostaria de fazer o pedido: - Prato: ' +
+        pedidoPrato[0] +
+        '- Bebida: ' +
+        pedidoBebida[0] +
+        '- Sobremesa: ' +
+        pedidoSobremesa[0] +
+        ': R$ ' +
+        formatarValor;
+    let textoCodificado = encodeURIComponent(texto);
+
+    window.open('https://wa.me/+5591999999999?text=' + textoCodificado);
+}
