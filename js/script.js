@@ -151,5 +151,11 @@ function fecharOPedido() {
         '\nTotal: R$ ' +
         formatarValor;
     let textoCodificado = encodeURIComponent(texto);
-    window.open('https://wa.me/+5591989397323?text=' + textoCodificado);
+    let numero = 999999999;
+    if(numero !== 999999999){
+        alert("trocar numero")
+    }
+    window.open('https://wa.me/+5591'+numero+'?text=' + textoCodificado);
+
+    
 }
