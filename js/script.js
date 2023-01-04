@@ -121,32 +121,14 @@ function pedidoFinalizado() {
         (pedidoPrato[0] === 'Frango Yin Yang' ||
             pedidoPrato[0] === 'Churrasco' ||
             pedidoPrato[0] === 'Peixe Frito') &&
-        (pedidoBebida[0] === 'Coca-Cola' || pedidoBebida[0] === 'Guaraná' || pedidoBebida[0] === 'Suco') &&
+        (pedidoBebida[0] === 'Coca-Cola' || 
+            pedidoBebida[0] === 'Guaraná' ||
+            pedidoBebida[0] === 'Suco') &&
         (pedidoSobremesa[0] === 'Pudim' ||
             pedidoSobremesa[0] === 'Bolo de Chocolate' ||
             pedidoSobremesa[0] === 'Sorvete de Baunilha')
     ) {
-        const botaoFinalizar = document.querySelector('.selecionarItens button');
-        botaoFinalizar.style.backgroundColor = '#32B72F';
-        botaoFinalizar.style.fontWeight = '600';
-        botaoFinalizar.style.cursor = 'pointer';
-        botaoFinalizar.innerHTML = 'Fechar Pedido';
-    }
-}
-
-/******************* */
-
-function pedidoFinalizado() {
-    if (
-        (pedidoPrato[0] === 'Frango Yin Yang' ||
-            pedidoPrato[0] === 'Churrasco' ||
-            pedidoPrato[0] === 'Peixe Frito') &&
-        (pedidoBebida[0] === 'Coca-Cola' || pedidoBebida[0] === 'Guaraná' || pedidoBebida[0] === 'Suco') &&
-        (pedidoSobremesa[0] === 'Pudim' ||
-            pedidoSobremesa[0] === 'Bolo de Chocolate' ||
-            pedidoSobremesa[0] === 'Sorvete de Baunilha')
-    ) {
-        const botaoFinalizar = document.querySelector('.selecionarItens button');
+        const botaoFinalizar = document.querySelector('button');
         botaoFinalizar.style.backgroundColor = '#32B72F';
         botaoFinalizar.style.fontWeight = '600';
         botaoFinalizar.style.cursor = 'pointer';
@@ -169,6 +151,5 @@ function fecharOPedido() {
         '\nTotal: R$ ' +
         formatarValor;
     let textoCodificado = encodeURIComponent(texto);
-    console.log(texto)
-    window.open('https://wa.me/+5591999999999?text=' + textoCodificado);
+    window.open('https://wa.me/+5591989397323?text=' + textoCodificado);
 }

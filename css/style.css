@@ -112,7 +112,7 @@ ion-icon{
 
 /*** fim das sessoes ***/
 
-.selecionarItens, .fecharPedido{
+.selecionarItens{
     height: 92px;
     width: 414px;
     background-color: #ffffff;
@@ -122,7 +122,7 @@ ion-icon{
     transform: translateX(-50%);
 }
 
-.selecionarItens button, .fecharPedido button{
+button{
     position: relative;
     top: 50%;
     left: 50%;
@@ -137,16 +137,5 @@ ion-icon{
     font-weight: 400;
     font-size: 20px;
     color: #FFFFFF;
-}
-
-.fecharPedido{
-    display: none;
-    z-index: 2;
-}
-
-.fecharPedido button{
-    background-color: #32B72F;
-    font-weight: 600;
-    cursor: pointer;
 }
 

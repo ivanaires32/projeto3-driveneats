@@ -22,12 +22,12 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container" onclick="pedidoFinalizado();">
         <section>
 
             <h1>Primeiro, seu prato</h1>
             <div class="flex">
-                <div id="frango" class="opcao" onclick="selecionarFrango(); pedidoFinalizado();">
+                <div id="frango" class="opcao" onclick="selecionarFrango();">
                     <div class="opcao-descricao">
                         <img src="images/frango_yin_yang.png" alt="">
                         <h2>Frango Yin Yang</h2>
@@ -39,7 +39,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarCarne(); pedidoFinalizado();" id="carne">
+                <div class="opcao" onclick="selecionarCarne();" id="carne">
                     <div class="opcao-descricao">
                         <img src="images/carne.jpg" alt="">
                         <h2>Churasco</h2>
@@ -51,7 +51,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarPeixe(); pedidoFinalizado();" id="peixe">
+                <div class="opcao" onclick="selecionarPeixe();" id="peixe">
                     <div class="opcao-descricao">
                         <img src="images/peixe.jpg" alt="">
                         <h2>Peixe Frito</h2>
@@ -71,7 +71,7 @@
 
             <h1>Agora, sua bebida</h1>
             <div class="flex">
-                <div class="opcao" onclick="selecionarCoca(); pedidoFinalizado();" id="coca">
+                <div class="opcao" onclick="selecionarCoca();" id="coca">
                     <div class="opcao-descricao">
                         <img src="images/coca-cola.png" alt="">
                         <h2>Coca-Cola</h2>
@@ -83,7 +83,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarGuarana(); pedidoFinalizado();" id="guarana">
+                <div class="opcao" onclick="selecionarGuarana();" id="guarana">
                     <div class="opcao-descricao">
                         <img src="images/guarana.jpg" alt="">
                         <h2>Guaraná</h2>
@@ -95,7 +95,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarSuco(); pedidoFinalizado();" id="suco">
+                <div class="opcao" onclick="selecionarSuco();" id="suco">
                     <div class="opcao-descricao">
                         <img src="images/suco.png" alt="">
                         <h2>Suco Natural</h2>
@@ -113,9 +113,9 @@
 
         <section>
 
-            <h1>Primeiro, seu prato</h1>
+            <h1>Por fim, sua sobremesa</h1>
             <div class="flex">
-                <div class="opcao" onclick="selecionarPudim(); pedidoFinalizado();" id="pudim">
+                <div class="opcao" onclick="selecionarPudim();" id="pudim">
                     <div class="opcao-descricao">
                         <img src="images/pudim.png" alt="">
                         <h2>Pudim</h2>
@@ -127,7 +127,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarBolo(); pedidoFinalizado();" id="bolo">
+                <div class="opcao" onclick="selecionarBolo();" id="bolo">
                     <div class="opcao-descricao">
                         <img src="images/bolo.jpg" alt="">
                         <h2>Bolo de Chocolate</h2>
@@ -139,7 +139,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
 
-                <div class="opcao" onclick="selecionarSorvete(); pedidoFinalizado();" id="sorvete">
+                <div class="opcao" onclick="selecionarSorvete();" id="sorvete">
                     <div class="opcao-descricao">
                         <img src="images/sorvete.jpg" alt="">
                         <h2>Sorvete</h2>
@@ -156,7 +156,7 @@
 
         </section><!--sobremesa-->
 
-        <div class="selecionarItens" id="selecionarItens" onclick="fecharOPedido()">
+        <div class="selecionarItens" onclick="fecharOPedido()">
             <button>Selecione os 3 itens para fechar o pedido</button>
         </div>
     </div><!--container-->
