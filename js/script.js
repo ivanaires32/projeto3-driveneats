@@ -160,15 +160,15 @@ function fecharOPedido() {
     let somaValor = (pedidoPrato[1] * 10 + pedidoBebida[1] * 10 + pedidoSobremesa[1] * 10) / 10;
     let formatarValor = somaValor.toFixed(2);
     let texto =
-        'Olá, gostaria de fazer o pedido: - Prato: ' +
+        'Olá, gostaria de fazer o pedido:\n- Prato: ' +
         pedidoPrato[0] +
-        '- Bebida: ' +
+        '\n- Bebida: ' +
         pedidoBebida[0] +
-        '- Sobremesa: ' +
+        '\n- Sobremesa: ' +
         pedidoSobremesa[0] +
-        ': R$ ' +
+        '\nTotal: R$ ' +
         formatarValor;
     let textoCodificado = encodeURIComponent(texto);
-
+    console.log(texto)
     window.open('https://wa.me/+5591999999999?text=' + textoCodificado);
 }

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrivenEats</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -59,7 +63,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
             </div><!--flex-->
-            
+
 
         </section><!--prato-->
 
@@ -103,7 +107,7 @@
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
             </div><!--flex-->
-            
+
 
         </section><!--bebida-->
 
@@ -141,23 +145,19 @@
                         <h2>Sorvete</h2>
                         <p>Sorvete de Baunilha</p>
                         <p id="preco">R$ 6,90</p>
-                        
+
                         <div id="iconeSorvete" class="icone">
                             <ion-icon name="checkmark-circle"></ion-icon>
                         </div>
                     </div><!--opcao-descricao-->
                 </div><!--opcao-->
             </div><!--flex-->
-            
+
 
         </section><!--sobremesa-->
 
-        <div class="selecionarItens" id="selecionarItens">
+        <div class="selecionarItens" id="selecionarItens" onclick="fecharOPedido()">
             <button>Selecione os 3 itens para fechar o pedido</button>
-        </div>
-
-        <div class="fecharPedido" id="fecharPedido" onclick="fecharOPedido();">
-            <button>Fechar Pedido</button>
         </div>
     </div><!--container-->
 
@@ -167,6 +167,7 @@
 
     <script src="js/script.js"></script>
 
-    
+
 </body>
+
 </html>
