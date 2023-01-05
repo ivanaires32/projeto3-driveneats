@@ -1,74 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 144px;
     height: 87px;
     border-radius: 4px;
 }
 
-header{
+header {
     width: 414px;
     height: 92px;
     background-color: #CF2B2B;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    position:fixed;
+    position: fixed;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     z-index: 2;
 }
 
-.cabecalho{
+.cabecalho {
     margin-left: 21px;
 }
 
-.cabecalho h1{
+.cabecalho h1 {
     font-family: 'Righteous', cursive;
     color: #FFFFFF;
-    font-size:44px;
+    font-size: 44px;
     font-style: normal;
     font-weight: 400;
 }
 
-.cabecalho p{
-    font-size:18px;
+.cabecalho p {
+    font-size: 18px;
     font-weight: 400;
     color: #FFFFFF;
 }
 
 /*** Fim do Header ***/
 
-.container{
+.container {
     max-width: 414px;
-    background-color:#e5e5e5;
+    background-color: #e5e5e5;
     margin: 92px auto;
 }
 
-section{
+section {
     padding-top: 29px;
     padding-left: 19px;
 }
 
-section h1{
+section h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
     font-style: normal;
-    font-weight:400;
+    font-weight: 400;
     color: #333333;
 }
 
-.flex{
+.flex {
     display: flex;
     overflow-x: scroll;
-    
+
 }
 
-section .opcao{
+.opcao {
     width: 172px;
     background-color: #ffffff;
     box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
@@ -78,33 +78,41 @@ section .opcao{
     box-sizing: border-box;
 }
 
-.icone{
+.iconeFrango,
+.iconeCarne,
+.iconePeixe,
+.iconeCoca,
+.iconeGuarana,
+.iconeSuco,
+.iconePudim,
+.iconeBolo,
+.iconeSorvete {
     text-align: right;
     display: none;
 }
 
-ion-icon{
+ion-icon {
     color: #32B72F;
 }
 
-.opcao-descricao{
+.opcao-descricao {
     padding: 18px 14px 13px 14px;
 }
 
-.opcao-descricao h2{
+.opcao-descricao h2 {
     font-size: 16px;
     font-weight: 700;
-    color:#333333;
+    color: #333333;
 }
 
-.opcao-descricao p{
+.opcao-descricao p {
     font-size: 15px;
     font-weight: 300;
     color: #a6a6a6;
     margin: 7px 0;
 }
 
-.opcao-descricao p:nth-child(4){
+.opcao-descricao p:nth-child(4) {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
@@ -113,7 +121,7 @@ ion-icon{
 
 /*** fim das sessoes ***/
 
-.selecionarItens{
+.selecionarItens {
     height: 92px;
     width: 414px;
     background-color: #ffffff;
@@ -124,13 +132,13 @@ ion-icon{
     z-index: 2;
 }
 
-button{
+button {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:364px;
-    height:61px;
+    width: 364px;
+    height: 61px;
     background-color: #cbcbcb;
     border-radius: 50px;
     border: 0;
@@ -141,3 +149,12 @@ button{
     color: #FFFFFF;
 }
 
+.ativo {
+    background-color: #32B72F;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.selecionado {
+    box-shadow: inset 0px 0px 0px 5px #32B72F;
+}

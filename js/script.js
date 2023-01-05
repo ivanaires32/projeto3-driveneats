@@ -2,40 +2,34 @@ let pedidoPrato;
 let pedidoBebida;
 let pedidoSobremesa;
 
-function selecionarFrango() {
-    document.getElementById('frango').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
-    document.getElementById('carne').style.boxShadow = 'none';
-    document.getElementById('peixe').style.boxShadow = 'none';
+function selecionarPrato(pratoSelecionado) {
 
-    document.getElementById('iconeFrango').style.display = 'block';
-    document.getElementById('iconeCarne').style.display = 'none';
-    document.getElementById('iconePeixe').style.display = 'none';
+    const outraOpcao = document.querySelector('.selecionado');
+    if (outraOpcao !== null) {
+        outraOpcao.classList.remove('selecionado');
+    }
+    const opcaoSelecionada = document.querySelector(pratoSelecionado);
+    opcaoSelecionada.classList.add('selecionado');
 
-    pedidoPrato = ['Frango Yin Yang', 14.9];
-}
 
-function selecionarCarne() {
-    document.getElementById('carne').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
-    document.getElementById('frango').style.boxShadow = 'none';
-    document.getElementById('peixe').style.boxShadow = 'none';
 
-    document.getElementById('iconeCarne').style.display = 'block';
-    document.getElementById('iconeFrango').style.display = 'none';
-    document.getElementById('iconePeixe').style.display = 'none';
-
-    pedidoPrato = ['Churrasco', 17.9];
-}
-
-function selecionarPeixe() {
-    document.getElementById('peixe').style.boxShadow = 'inset 0px 0px 0px 5px #32B72F';
-    document.getElementById('frango').style.boxShadow = 'none';
-    document.getElementById('carne').style.boxShadow = 'none';
-
-    document.getElementById('iconePeixe').style.display = 'block';
-    document.getElementById('iconeFrango').style.display = 'none';
-    document.getElementById('iconeCarne').style.display = 'none';
-
-    pedidoPrato = ['Peixe Frito', 12.9];
+    if (pratoSelecionado === '.frango') {
+        document.querySelector(".iconeFrango").style.display = "block";
+        document.querySelector(".iconeCarne").style.display = "none";
+        document.querySelector(".iconePeixe").style.display = "none";
+    } else if (pratoSelecionado === '.carne') {
+        document.querySelector(".frango").classList.remove('selecionado');
+        document.querySelector(".peixe").classList.remove('selecionado');
+        document.querySelector(".iconeCarne").style.display = "block";
+        document.querySelector(".iconeFrango").style.display = "none";
+        document.querySelector(".iconePeixe").style.display = "none";
+    } else if (pratoSelecionado === '.peixe') {
+        document.querySelector(".frango").classList.remove('selecionado');
+        document.querySelector(".carne").classList.remove('selecionado');
+        document.querySelector(".iconePeixe").style.display = "block";
+        document.querySelector(".iconeCarne").style.display = "none";
+        document.querySelector(".iconeFrango").style.display = "none";
+    }
 }
 
 //******************************** */
@@ -121,7 +115,7 @@ function pedidoFinalizado() {
         (pedidoPrato[0] === 'Frango Yin Yang' ||
             pedidoPrato[0] === 'Churrasco' ||
             pedidoPrato[0] === 'Peixe Frito') &&
-        (pedidoBebida[0] === 'Coca-Cola' || 
+        (pedidoBebida[0] === 'Coca-Cola' ||
             pedidoBebida[0] === 'Guaraná' ||
             pedidoBebida[0] === 'Suco') &&
         (pedidoSobremesa[0] === 'Pudim' ||
@@ -152,10 +146,10 @@ function fecharOPedido() {
         formatarValor;
     let textoCodificado = encodeURIComponent(texto);
     let numero = 999999999;
-    if(numero !== 999999999){
+    if (numero !== 999999999) {
         alert("trocar numero")
     }
-    window.open('https://wa.me/+5591'+numero+'?text=' + textoCodificado);
+    window.open('https://wa.me/+5591' + numero + '?text=' + textoCodificado);
 
-    
+
 }
