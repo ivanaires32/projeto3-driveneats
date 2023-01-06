@@ -17,7 +17,12 @@ function selecionarPrato(pratoSelecionado) {
     const check = document.querySelector('.prato .selecionado .icone');
     check.classList.add('block');
 
-    pedidoPrato = true;
+    const nomeDoPedido = pratoSelecionado.querySelector('h2').innerHTML;
+    const precoPedido = pratoSelecionado.querySelector('.none').innerHTML;
+
+    pedidoPrato = []
+    pedidoPrato.push(true, nomeDoPedido, precoPedido);
+    console.log(pedidoPrato)
 
 }
 
@@ -37,7 +42,12 @@ function selecionarBebida(bebidaSelecionada) {
     const check = document.querySelector('.bebida .selecionado .icone');
     check.classList.add('block');
 
-    pedidoBebida = true;
+    const nomeDoPedido = bebidaSelecionada.querySelector('h2').innerHTML;
+    const precoPedido = bebidaSelecionada.querySelector('.none').innerHTML
+
+    pedidoBebida = []
+    pedidoBebida.push(true, nomeDoPedido, precoPedido);
+    console.log(pedidoBebida)
 
 }
 
@@ -57,13 +67,19 @@ function selecionarSobremesa(sobremesaSelecionada) {
     const check = document.querySelector('.sobremesa .selecionado .icone');
     check.classList.add('block');
 
-    pedidoSobremesa = true;
+    const nomeDoPedido = sobremesaSelecionada.querySelector('h2').innerHTML;
+    const precoPedido = sobremesaSelecionada.querySelector('.none').innerHTML;
+
+    pedidoSobremesa = [];
+    pedidoSobremesa.push(true, nomeDoPedido, precoPedido)
+
+    console.log(pedidoSobremesa)
 }
 
 /******************** */
 
 function pedidoFinalizado() {
-    if (pedidoPrato === true && pedidoBebida === true && pedidoSobremesa === true) {
+    if (pedidoPrato[0] === true && pedidoBebida[0] === true && pedidoSobremesa[0] === true) {
         const botaoFinalizar = document.querySelector('button');
         botaoFinalizar.classList.add('fazerPedido')
         botaoFinalizar.innerHTML = 'Fechar Pedido';
@@ -73,17 +89,20 @@ function pedidoFinalizado() {
 /******************* */
 
 function fecharOPedido() {
-    let somaValor = pedidoPrato[1] + pedidoBebida[1] + pedidoSobremesa[1];
-    let formatarValor = somaValor.toFixed(2);
-    let texto = `Olá, gostaria de fazer o pedido:
-- Prato: ${pedidoPrato[0]}
-- Bebida: ${pedidoBebida[0]}
-- Sobremesa: ${pedidoSobremesa[0]}
-Total: R$ ${formatarValor}`;
+    const ValorPrato = Number(pedidoPrato[2]);
+    const ValorBebida = Number(pedidoBebida[2]);
+    const ValorSobremesa = Number(pedidoSobremesa[2]);
+    const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
+    const formatarValor = somaValor.toFixed(2)
+    const texto = `Olá, gostaria de fazer o pedido:
+- Prato: ${pedidoPrato[1]}
+- Bebida: ${pedidoBebida[1]}
+- Sobremesa: ${pedidoSobremesa[1]}
+Total: ${formatarValor}`;
 
 
-    let textoCodificado = encodeURIComponent(texto);
-    let numero = 999999999;
+    const textoCodificado = encodeURIComponent(texto);
+    const numero = 999999999;
     if (numero !== 999999999) {
         alert("trocar numero")
     }//esse alerta é para verificar se não coloquei meu numero
