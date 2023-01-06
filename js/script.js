@@ -75,11 +75,14 @@ function selecionarSobremesa(sobremesaSelecionada) {
 /******************** */
 
 function pedidoFinalizado() {
+    const botaoDesabilitado = document.querySelector('.selecionarItens .desabilitado');
+    const botaoAtivo = document.querySelector('.selecionarItens .clicavel')
     if (pedidoPrato[0] === true && pedidoBebida[0] === true && pedidoSobremesa[0] === true) {
-        const botaoFinalizar = document.querySelector('button');
-        botaoFinalizar.classList.add('fazerPedido');
-        botaoFinalizar.innerHTML = 'Fechar Pedido';
+        botaoDesabilitado.classList.add('none');
+        botaoAtivo.classList.remove('clicavel');
+        botaoAtivo.classList.add('habilitado');
     }
+
 }
 
 /******************* */
@@ -90,11 +93,7 @@ function fecharOPedido() {
     const ValorSobremesa = Number(pedidoSobremesa[2]);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
     const formatarValor = somaValor.toFixed(2);
-    const texto = `Olá, gostaria de fazer o pedido:
-- Prato: ${pedidoPrato[1]}
-- Bebida: ${pedidoBebida[1]}
-- Sobremesa: ${pedidoSobremesa[1]}
-Total: ${formatarValor}`;
+    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato[1]}\n- Bebida: ${pedidoBebida[1]}\n- Sobremesa: ${pedidoSobremesa[1]}\nTotal: ${formatarValor}`;
 
 
     const textoCodificado = encodeURIComponent(texto);
