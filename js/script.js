@@ -93,11 +93,7 @@ function fecharOPedido() {
     const ValorSobremesa = Number(pedidoSobremesa[2]);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
     const formatarValor = somaValor.toFixed(2);
-    const texto = `Olá, gostaria de fazer o pedido:
-- Prato: ${pedidoPrato[1]}
-- Bebida: ${pedidoBebida[1]}
-- Sobremesa: ${pedidoSobremesa[1]}
-Total: ${formatarValor}`;
+    const texto = `Olá, gostaria de fazer o pedido:- Prato: ${pedidoPrato[1]}- Bebida: ${pedidoBebida[1]}- Sobremesa: ${pedidoSobremesa[1]}Total: ${formatarValor}`;
 
     const textoCodificado = encodeURIComponent(texto);
     const numero = 999999999;
