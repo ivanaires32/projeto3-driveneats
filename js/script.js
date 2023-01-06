@@ -108,15 +108,10 @@ function fecharOPedido() {
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
-    console.log(somaValor)
     const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\nTotal: ${somaValor}`;
 
     const textoCodificado = encodeURIComponent(texto);
-    const numero = 999999999;
-    if (numero !== 999999999) {
-        alert("trocar numero")
-    }//esse alerta é para verificar se não coloquei meu numero
-    window.open(`https://wa.me/+5591${numero}?text=${textoCodificado}`);
+    window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);
 
     //adicionar aqui
 }

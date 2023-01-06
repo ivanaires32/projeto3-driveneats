@@ -49,12 +49,12 @@ header {
     margin: 92px auto;
 }
 
-section {
+.opcoes {
     padding-top: 29px;
     padding-left: 19px;
 }
 
-section h1 {
+.opcoes h1 {
     font-family: 'Righteous', cursive;
     font-size: 26px;
     font-style: normal;
