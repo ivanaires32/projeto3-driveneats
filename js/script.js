@@ -12,7 +12,7 @@ function selecionarPrato(pratoSelecionado) {
 
     const semCheck = document.querySelector('.prato .block');
     if (semCheck !== null) {
-        semCheck.classList.remove('block')
+        semCheck.classList.remove('block');
     }
     const check = document.querySelector('.prato .selecionado .icone');
     check.classList.add('block');
@@ -20,9 +20,8 @@ function selecionarPrato(pratoSelecionado) {
     const nomeDoPedido = pratoSelecionado.querySelector('h2').innerHTML;
     const precoPedido = pratoSelecionado.querySelector('.none').innerHTML;
 
-    pedidoPrato = []
+    pedidoPrato = [];
     pedidoPrato.push(true, nomeDoPedido, precoPedido);
-    console.log(pedidoPrato)
 
 }
 
@@ -37,17 +36,16 @@ function selecionarBebida(bebidaSelecionada) {
 
     const semCheck = document.querySelector('.bebida .block');
     if (semCheck !== null) {
-        semCheck.classList.remove('block')
+        semCheck.classList.remove('block');
     }
     const check = document.querySelector('.bebida .selecionado .icone');
     check.classList.add('block');
 
     const nomeDoPedido = bebidaSelecionada.querySelector('h2').innerHTML;
-    const precoPedido = bebidaSelecionada.querySelector('.none').innerHTML
+    const precoPedido = bebidaSelecionada.querySelector('.none').innerHTML;
 
-    pedidoBebida = []
+    pedidoBebida = [];
     pedidoBebida.push(true, nomeDoPedido, precoPedido);
-    console.log(pedidoBebida)
 
 }
 
@@ -71,9 +69,7 @@ function selecionarSobremesa(sobremesaSelecionada) {
     const precoPedido = sobremesaSelecionada.querySelector('.none').innerHTML;
 
     pedidoSobremesa = [];
-    pedidoSobremesa.push(true, nomeDoPedido, precoPedido)
-
-    console.log(pedidoSobremesa)
+    pedidoSobremesa.push(true, nomeDoPedido, precoPedido);
 }
 
 /******************** */
@@ -81,7 +77,7 @@ function selecionarSobremesa(sobremesaSelecionada) {
 function pedidoFinalizado() {
     if (pedidoPrato[0] === true && pedidoBebida[0] === true && pedidoSobremesa[0] === true) {
         const botaoFinalizar = document.querySelector('button');
-        botaoFinalizar.classList.add('fazerPedido')
+        botaoFinalizar.classList.add('fazerPedido');
         botaoFinalizar.innerHTML = 'Fechar Pedido';
     }
 }
@@ -93,7 +89,7 @@ function fecharOPedido() {
     const ValorBebida = Number(pedidoBebida[2]);
     const ValorSobremesa = Number(pedidoSobremesa[2]);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
-    const formatarValor = somaValor.toFixed(2)
+    const formatarValor = somaValor.toFixed(2);
     const texto = `Olá, gostaria de fazer o pedido:
 - Prato: ${pedidoPrato[1]}
 - Bebida: ${pedidoBebida[1]}
