@@ -6,8 +6,6 @@ let precoPrato;
 let precoBebida;
 let precoSobremesa;
 
-//
-
 function selecionarPrato(pratoSelecionado) {
 
     const outraOpcao = document.querySelector('.prato .selecionado');
@@ -110,8 +108,8 @@ function fecharOPedido() {
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
-    const formatarValor = somaValor.toFixed(2);
-    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\nTotal: ${formatarValor}`;
+    console.log(somaValor)
+    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\nTotal: ${somaValor}`;
 
     const textoCodificado = encodeURIComponent(texto);
     const numero = 999999999;
