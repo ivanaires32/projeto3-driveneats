@@ -2,6 +2,12 @@ let pedidoPrato;
 let pedidoBebida;
 let pedidoSobremesa;
 
+let precoPrato;
+let precoBebida;
+let precoSobremesa;
+
+//
+
 function selecionarPrato(pratoSelecionado) {
 
     const outraOpcao = document.querySelector('.prato .selecionado');
@@ -20,8 +26,10 @@ function selecionarPrato(pratoSelecionado) {
     const nomeDoPedido = pratoSelecionado.querySelector('h2').innerHTML;
     const precoPedido = pratoSelecionado.querySelector('.none').innerHTML;
 
-    pedidoPrato = [];
-    pedidoPrato.push(true, nomeDoPedido, precoPedido);
+    pedidoPrato = nomeDoPedido;
+    precoPrato = precoPedido;
+
+    pedidoFinalizado();
 
 }
 
@@ -44,8 +52,10 @@ function selecionarBebida(bebidaSelecionada) {
     const nomeDoPedido = bebidaSelecionada.querySelector('h2').innerHTML;
     const precoPedido = bebidaSelecionada.querySelector('.none').innerHTML;
 
-    pedidoBebida = [];
-    pedidoBebida.push(true, nomeDoPedido, precoPedido);
+    pedidoBebida = nomeDoPedido;
+    precoBebida = precoPedido;
+
+    pedidoFinalizado();
 
 }
 
@@ -68,8 +78,10 @@ function selecionarSobremesa(sobremesaSelecionada) {
     const nomeDoPedido = sobremesaSelecionada.querySelector('h2').innerHTML;
     const precoPedido = sobremesaSelecionada.querySelector('.none').innerHTML;
 
-    pedidoSobremesa = [];
-    pedidoSobremesa.push(true, nomeDoPedido, precoPedido);
+    pedidoSobremesa = nomeDoPedido;
+    precoSobremesa = precoPedido;
+
+    pedidoFinalizado();
 }
 
 /******************** */
@@ -77,23 +89,29 @@ function selecionarSobremesa(sobremesaSelecionada) {
 function pedidoFinalizado() {
     const botaoDesabilitado = document.querySelector('.selecionarItens .desabilitado');
     const botaoAtivo = document.querySelector('.selecionarItens .clicavel')
-    if (pedidoPrato[0] === true && pedidoBebida[0] === true && pedidoSobremesa[0] === true) {
-        botaoDesabilitado.classList.add('none');
-        botaoAtivo.classList.remove('clicavel');
-        botaoAtivo.classList.add('habilitado');
+    if (pedidoPrato[0] !== undefined) {
+        console.log(pedidoPrato)
+        if (pedidoBebida !== undefined) {
+            console.log(pedidoBebida)
+            if (pedidoSobremesa !== undefined) {
+                console.log(pedidoSobremesa)
+                botaoDesabilitado.classList.add('none');
+                botaoAtivo.classList.add('habilitado');
+            }
+        }
     }
-
 }
+
 
 /******************* */
 
 function fecharOPedido() {
-    const ValorPrato = Number(pedidoPrato[2]);
-    const ValorBebida = Number(pedidoBebida[2]);
-    const ValorSobremesa = Number(pedidoSobremesa[2]);
+    const ValorPrato = Number(precoPrato);
+    const ValorBebida = Number(precoBebida);
+    const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
     const formatarValor = somaValor.toFixed(2);
-    const texto = `Olá, gostaria de fazer o pedido:- Prato: ${pedidoPrato[1]}- Bebida: ${pedidoBebida[1]}- Sobremesa: ${pedidoSobremesa[1]}Total: ${formatarValor}`;
+    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\nTotal: ${formatarValor}`;
 
     const textoCodificado = encodeURIComponent(texto);
     const numero = 999999999;
@@ -101,4 +119,6 @@ function fecharOPedido() {
         alert("trocar numero")
     }//esse alerta é para verificar se não coloquei meu numero
     window.open(`https://wa.me/+5591${numero}?text=${textoCodificado}`);
+
+    //adicionar aqui
 }
