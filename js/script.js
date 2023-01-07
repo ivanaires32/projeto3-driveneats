@@ -107,7 +107,8 @@ function fecharOPedido() {
     const ValorPrato = Number(precoPrato);
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
-    const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
+    const somaValor = (ValorBebida * 10 + ValorPrato * 10 + ValorSobremesa * 10) / 10;
+    console.log(somaValor)
     const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\n
     Total: R$ ${somaValor}`;
 
