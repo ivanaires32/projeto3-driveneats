@@ -174,27 +174,28 @@
 
         <div class="telaBranca none"></div>
         <div class="telaConfirmacao none">
-            <div class="confirmarPedido">
+            <div data-test="confirm-order-modal" class="confirmarPedido">
                 <div class="tituloConfirmar">
                     <h1>Confirme seu Pedido</h1>
                 </div>
                 <div class="detalhesPedido">
                     <div class="nomePedidos">
-                        <p>Frango Yin Yang</p>
-                        <p>Coca-Cola</p>
-                        <p>Pudim</p>
+                        <p class="nomePrato"></p>
+                        <p class="nomeBebida"></p>
+                        <p class="nomeSobremesa"></p>
                         <p class="total">Total</p>
                     </div>
                     <div class="precoPedidos">
-                        <p>14,90</p>
-                        <p>4,90</p>
-                        <p>7,90</p>
-                        <p class="total">R$ 27,70</p>
+                        <p class="precoPrato"></p>
+                        <p class="precoBebida"></p>
+                        <p class="precoSobremesa"></p>
+                        <p class="total precoTotal"></p>
                     </div>
                 </div><!--detalhesPedido-->
                 <div class="confirmarBotoes">
-                    <button class="tudoCerto">Tudo certo, pode pedir!</button>
-                    <button class="cancelar">Cancelar </button>
+                    <button data-test="confirm-order-btn" class="tudoCerto" onclick="confirmarPedido();">Tudo certo,
+                        pode pedir!</button>
+                    <button data-test="cancel-order-btn" class="cancelar" onclick="naoConfirmado();">Cancelar </button>
                 </div>
             </div>
         </div>

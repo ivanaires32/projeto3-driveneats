@@ -6,6 +6,10 @@ let precoPrato;
 let precoBebida;
 let precoSobremesa;
 
+let texto;
+let nome;
+let endereco;
+
 function selecionarPrato(pratoSelecionado) {
 
     const outraOpcao = document.querySelector('.prato .selecionado');
@@ -108,13 +112,34 @@ function fecharOPedido() {
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
-    const corrigirValor = somaValor.toFixed(2)
-    const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\n
-    Total: R$ ${corrigirValor}`;
+    const corrigirValor = somaValor.toFixed(2);
+    nome = prompt("Digite seu nome!");
+    endereco = prompt("Digite seu endereço!");
+    texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}
+Total: R$ ${corrigirValor}
+    
+Nome: ${nome}
+Endereço: ${endereco}`;
+
+
 
     document.querySelector('.telaBranca').classList.remove('none');
     document.querySelector('.telaConfirmacao').classList.remove('none');
+    document.querySelector('.nomePrato').innerHTML = pedidoPrato;
+    document.querySelector('.nomeBebida').innerHTML = pedidoBebida;
+    document.querySelector('.nomeSobremesa').innerHTML = pedidoSobremesa;
+    document.querySelector('.precoPrato').innerHTML = precoPrato;
+    document.querySelector('.precoBebida').innerHTML = precoBebida;
+    document.querySelector('.precoSobremesa').innerHTML = precoSobremesa;
+    document.querySelector('.precoTotal').innerHTML = corrigirValor;
+}
 
-    /*const textoCodificado = encodeURIComponent(texto);
-    window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);*/
+function confirmarPedido() {
+    const textoCodificado = encodeURIComponent(texto);
+    window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);
+}
+
+function naoConfirmado() {
+    document.querySelector('.telaBranca').classList.add('none');
+    document.querySelector('.telaConfirmacao').classList.add('none');
 }
