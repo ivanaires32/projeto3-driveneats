@@ -107,11 +107,11 @@ function fecharOPedido() {
     const ValorPrato = Number(precoPrato);
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
+    const somaValor = ValorBebida + ValorPrato + ValorSobremesa;
+    const corrigirValor = somaValor.toFixed(2)
     const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\n
-    Total: R$ ${((ValorPrato * 10 + ValorBebida * 10 + ValorSobremesa * 10) / 10) + 0.01}`;
+    Total: R$ ${corrigirValor}`;
 
     const textoCodificado = encodeURIComponent(texto);
     window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);
-
-    //adicionar aqui
 }
