@@ -112,6 +112,9 @@ function fecharOPedido() {
     const texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}\n
     Total: R$ ${corrigirValor}`;
 
-    const textoCodificado = encodeURIComponent(texto);
-    window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);
+    document.querySelector('.telaBranca').classList.remove('none');
+    document.querySelector('.telaConfirmacao').classList.remove('none');
+
+    /*const textoCodificado = encodeURIComponent(texto);
+    window.open(`https://wa.me/+5591999999999?text=${textoCodificado}`);*/
 }

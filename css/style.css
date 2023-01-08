@@ -141,14 +141,13 @@ ion-icon {
     z-index: 2;
 }
 
-button {
+.selecionarItens button {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 364px;
     height: 61px;
-    background-color: #cbcbcb;
     border-radius: 50px;
     border: 0;
     text-align: center;
@@ -156,6 +155,10 @@ button {
     font-weight: 400;
     font-size: 20px;
     color: #FFFFFF;
+}
+
+.selecionarItens button:nth-child(1) {
+    background-color: #cbcbcb;
 }
 
 .selecionado {
@@ -172,4 +175,90 @@ button {
     font-size: 20px;
     cursor: pointer;
     display: block;
+}
+
+.telaBranca {
+    width: 100%;
+    height: 1078px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.confirmarPedido {
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    max-width: 377px;
+    height: 380px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 6;
+}
+
+.tituloConfirmar h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.detalhesPedido {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.nomePedidos p,
+.precoPedidos p {
+    padding: 13px 0;
+    font-weight: 400;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.precoPedidos {
+    text-align: right;
+}
+
+.nomePedidos .total,
+.precoPedidos .total {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.confirmarBotoes {
+    display: flex;
+    flex-direction: column;
+}
+
+.tudoCerto {
+    width: 329px;
+    height: 52px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    color: #32B72F;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+    border: 0;
+}
+
+.cancelar {
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #50D074;
+    border: 0;
+    color: #ffffff;
+    margin-top: 5px;
+    cursor: pointer;
 }
