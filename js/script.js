@@ -112,6 +112,7 @@ function fecharOPedido() {
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorPrato + ValorBebida + ValorSobremesa;
+    console.log(somaValor)
     nome = prompt("Digite seu nome!");
     endereco = prompt("Digite seu endereço!");
     texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}
