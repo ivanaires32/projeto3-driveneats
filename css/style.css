@@ -113,7 +113,7 @@ ion-icon {
     margin: 7px 0;
 }
 
-.opcao-descricao p:nth-child(4) {
+.opcao-descricao p.preco {
     color: #000000;
     font-size: 16px;
     font-weight: 400;
