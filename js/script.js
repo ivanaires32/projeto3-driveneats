@@ -112,11 +112,11 @@ function fecharOPedido() {
     const ValorBebida = Number(precoBebida);
     const ValorSobremesa = Number(precoSobremesa);
     const somaValor = ValorPrato + ValorBebida + ValorSobremesa;
-    console.log(somaValor)
+    const valor2 = 2;
     nome = prompt("Digite seu nome!");
     endereco = prompt("Digite seu endereço!");
     texto = `Olá, gostaria de fazer o pedido:\n- Prato: ${pedidoPrato}\n- Bebida: ${pedidoBebida}\n- Sobremesa: ${pedidoSobremesa}
-Total: R$ ${somaValor}
+Total: R$ ${somaValor.toFixed(valor2)}
     
 Nome: ${nome}
 Endereço: ${endereco}`;
@@ -131,7 +131,7 @@ Endereço: ${endereco}`;
     document.querySelector('.precoPrato').innerHTML = precoPrato;
     document.querySelector('.precoBebida').innerHTML = precoBebida;
     document.querySelector('.precoSobremesa').innerHTML = precoSobremesa;
-    document.querySelector('.precoTotal').innerHTML = somaValor;
+    document.querySelector('.precoTotal').innerHTML = somaValor.toFixed(valor2);
 }
 
 function confirmarPedido() {
