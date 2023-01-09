@@ -130,7 +130,7 @@ Endereço: ${endereco}`;
     document.querySelector('.precoPrato').innerHTML = precoPrato;
     document.querySelector('.precoBebida').innerHTML = precoBebida;
     document.querySelector('.precoSobremesa').innerHTML = precoSobremesa;
-    document.querySelector('.precoTotal').innerHTML = corrigirValor;
+    document.querySelector('.precoTotal').innerHTML = somaValor.toFixed(2);
 }
 
 function confirmarPedido() {
