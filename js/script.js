@@ -128,9 +128,9 @@ Endereço: ${endereco}`;
     document.querySelector('.nomePrato').innerHTML = pedidoPrato;
     document.querySelector('.nomeBebida').innerHTML = pedidoBebida;
     document.querySelector('.nomeSobremesa').innerHTML = pedidoSobremesa;
-    document.querySelector('.precoPrato').innerHTML = precoPrato;
-    document.querySelector('.precoBebida').innerHTML = precoBebida;
-    document.querySelector('.precoSobremesa').innerHTML = precoSobremesa;
+    document.querySelector('.precoPrato').innerHTML = ValorPrato.toFixed(valor2);
+    document.querySelector('.precoBebida').innerHTML = ValorBebida.toFixed(valor2);
+    document.querySelector('.precoSobremesa').innerHTML = ValorSobremesa.toFixed(valor2);
     document.querySelector('.precoTotal').innerHTML = somaValor.toFixed(valor2);
 }
 
